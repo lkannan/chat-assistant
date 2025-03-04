@@ -3,20 +3,20 @@
   "version": "2.0.0",
   "name": "Generative AI Chat Widget",
   "newInstancePrefix": "GenAIChat",
-  "icon": "/icon.png",
+  "icon": "https://lkannan.github.io/chat-assistant/icon.png",
   "vendor": "Your Company",
 "webcomponents": [
   {
     "kind": "main",
     "tag": "com-example-genaichatwidget",
-    "url": "/genai-chat-widget.js",
+    "url": "https://lkannan.github.io/chat-assistant/genai-chat-widget.js",
     "integrity": "",
     "ignoreIntegrity": true
   },
   {
     "kind": "builder",
     "tag": "com-example-genaichatwidget-builder",
-    "url": "/builderpanel.js",
+    "url": "https://lkannan.github.io/chat-assistant/builderpanel.js",
     "integrity": "",
     "ignoreIntegrity": true
   }
