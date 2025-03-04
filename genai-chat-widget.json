@@ -1,0 +1,83 @@
+{
+  "id": "com.example.genaichatwidget",
+  "version": "2.0.0",
+  "name": "Generative AI Chat Widget",
+  "newInstancePrefix": "GenAIChat",
+  "icon": "/icon.png",
+  "vendor": "Your Company",
+"webcomponents": [
+  {
+    "kind": "main",
+    "tag": "com-example-genaichatwidget",
+    "url": "/genai-chat-widget.js",
+    "integrity": "",
+    "ignoreIntegrity": true
+  },
+  {
+    "kind": "builder",
+    "tag": "com-example-genaichatwidget-builder",
+    "url": "/builderpanel.js",
+    "integrity": "",
+    "ignoreIntegrity": true
+  }
+],
+  "properties": {
+    "apiKey": {
+      "type": "string",
+      "description": "Google API Key",
+      "default": ""
+    },
+    "chatHistory": {
+      "type": "string",
+      "description": "Chat conversation history",
+      "default": "[]"
+    },
+    "systemPrompt": {
+      "type": "string",
+      "description": "System prompt for the AI",
+      "default": "You are a helpful assistant for SAP Analytics Cloud."
+    }
+  },
+  "methods": {
+    "sendMessage": {
+      "description": "Sends a message to the AI",
+      "parameters": [
+        {
+          "name": "message",
+          "type": "string",
+          "description": "Message to send to the AI"
+        }
+      ],
+      "returnType": "string"
+    },
+    "clearChat": {
+      "description": "Clears the chat history"
+    },
+    "getLastResponse": {
+      "description": "Gets the last AI response",
+      "returnType": "string"
+    },
+    "setSystemPrompt": {
+      "description": "Sets the system prompt for the AI",
+      "parameters": [
+        {
+          "name": "prompt",
+          "type": "string",
+          "description": "System prompt for the AI"
+        }
+      ]
+    },
+    "getChatHistory": {
+      "description": "Gets the full chat history",
+      "returnType": "string"
+    }
+  },
+  "events": {
+    "onMessageSent": {
+      "description": "Triggered when a message is sent to the AI"
+    },
+    "onResponseReceived": {
+      "description": "Triggered when a response is received from the AI"
+    }
+  }
+}
